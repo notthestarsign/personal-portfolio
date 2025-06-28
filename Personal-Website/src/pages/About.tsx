@@ -1,8 +1,8 @@
 import Navbar from "@/components/ui/Navbar";
-import ChildPhoto1 from "@/assets/Child Photo 1.JPEG";
-import ChildPhoto2 from "@/assets/Child Photo 2.JPEG";
+import ChildPhoto1 from "@/assets/Child Photo 1.png";
+import ChildPhoto2 from "@/assets/Child Photo 2.png";
 import personalPhoto from "@/assets/profile.png";
-import personalPhoto2 from "@/assets/Profile2.JPEG";
+import personalPhoto2 from "@/assets/Profile2.png";
 
 export default function About() {
   return (
