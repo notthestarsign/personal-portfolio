@@ -4,6 +4,7 @@ import Landing from '@/pages/Landing';
 import Home from '@/pages/Home';
 import Projects from '@/pages/Projects';
 import Resume from '@/pages/Resume';
+import About from '@/pages/About';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ function App() {
       <Route path="/home" element={<Home />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/resume" element={<Resume />} />
-      <Route path="/about" element={<Home />} />
+      <Route path="/about" element={<About />} />
     </Routes>
     </>
   )
