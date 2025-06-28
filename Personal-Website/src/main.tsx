@@ -6,9 +6,11 @@ import App from "./App"
 import "./index.css" // Your Tailwind setup
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  <div className="bg-gray-950 text-white min-h-screen">
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </div>
 )
