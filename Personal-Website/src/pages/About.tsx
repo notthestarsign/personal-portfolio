@@ -3,8 +3,21 @@ import ChildPhoto1 from "@/assets/Child Photo 1.png";
 import ChildPhoto2 from "@/assets/Child Photo 2.png";
 import personalPhoto from "@/assets/profile.png";
 import personalPhoto2 from "@/assets/Profile2.png";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const halfway = window.innerHeight / 2;
+      setShowScrollTop(window.scrollY > halfway);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="bg-gray-950 text-white min-h-screen">
           <Navbar />
@@ -32,7 +45,6 @@ export default function About() {
                     <p>Raised by my mother and grandparents, who instilled in me the value of education and hard work.</p>
                      <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
                   </li>
-                  
                 </ul>
                 
               </p>
@@ -213,6 +225,16 @@ export default function About() {
                 <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
               </ul>
           </div>
+
+          {showScrollTop && (
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 hover:cursor-pointer"
+            >
+              ↑ Back to Top
+            </button>
+          )}
+
         </div>
   );
 }
