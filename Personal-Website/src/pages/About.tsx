@@ -1,9 +1,11 @@
 import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 import ChildPhoto1 from "@/assets/Child Photo 1.png";
 import ChildPhoto2 from "@/assets/Child Photo 2.png";
 import personalPhoto from "@/assets/profile.png";
 import personalPhoto2 from "@/assets/Profile2.png";
 import { useEffect, useState } from "react";
+
 
 export default function About() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -21,8 +23,8 @@ export default function About() {
   return (
     <div className="bg-gray-950 text-white min-h-screen">
           <Navbar />
-
-          <div className="p-6 bg-black mt-6 mb-6 flex flex-col md:flex-row items-center md:items-start gap-10">
+          {/* Background Section */}
+          <div className="p-10 bg-gradient-to-br from-black to-gray-900 mx-10 mt-10 rounded-xl flex flex-col md:flex-row items-center md:items-start gap-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={ChildPhoto1}
@@ -32,7 +34,7 @@ export default function About() {
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <h2 className="text-2xl mb-3 underline underline-offset-4">Background:</h2>
-              <p className="text-gray-300 leading-relaxed">
+              <div className="text-gray-300 leading-relaxed">
                 <ul className="relative border-l border-yellow-400 ml-4 pl-6 space-y-6">
                   <li>
                     <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
@@ -47,12 +49,12 @@ export default function About() {
                   </li>
                 </ul>
                 
-              </p>
+              </div>
             </div>
           </div>
     
           {/* Education Section */}
-          <div className="p-6 bg-black mt-6 mb-6 flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
+          <div className="p-10 bg-gradient-to-br from-gray-900 to-black mx-10 mt-10 rounded-xl flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={ChildPhoto2}
@@ -96,7 +98,7 @@ export default function About() {
           </div>
 
           {/* What Drives Me Section */}
-          <div className="p-6 bg-black mt-6 mb-6 flex flex-col md:flex-row items-center md:items-start gap-10">
+          <div className="p-10 bg-gradient-to-br from-black to-gray-900 mx-10 mt-10 rounded-xl flex flex-col md:flex-row items-center md:items-start gap-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={personalPhoto}
@@ -106,7 +108,7 @@ export default function About() {
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <h2 className="text-2xl mb-3 underline underline-offset-4">What Drives Me:</h2>
-              <p className="text-gray-300 leading-relaxed">
+              <div className="text-gray-300 leading-relaxed">
                 <ul className="relative border-l border-yellow-400 ml-4 pl-6 space-y-6">
                   <li>
                     <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
@@ -143,12 +145,12 @@ export default function About() {
                      <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
 
           {/* Fun Facts Section */}
-          <div className="p-6 bg-black mt-6 mb-6 flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
+          <div className="p-10 bg-gradient-to-br from-gray-900 to-black mx-10 mt-10 rounded-xl flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={personalPhoto2}
@@ -204,8 +206,8 @@ export default function About() {
               </div>
           </div>
 
-          {/* Motto and Bible Verse Section */}
-          <div className="flex flex-col items-center justify-center p-6 bg-black mt-6 mb-6">
+          {/* Way of life Section */}
+          <div className="flex flex-col items-center justify-center p-10 bg-gradient-to-br from-black to-gray-900 mx-10 mt-10 mb-10 rounded-xl">
             <h2 className="text-2xl mb-3 underline underline-offset-4">Way of life:</h2>
               <ul className="relative border-l border-yellow-400 ml-4 pl-6 space-y-6">
                 <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
@@ -235,6 +237,8 @@ export default function About() {
             </button>
           )}
 
-        </div>
+          {/* Footer */}
+          <Footer />
+    </div>
   );
 }
