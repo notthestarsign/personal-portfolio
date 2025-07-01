@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function Landing() {
   return (
     <div className="min-h-screen bg-gray-950 text-white flex flex-col md:flex-row">
-      {/* Left Side - Image */}
+      {/* Left Side */}
       <div className="md:w-1/2 flex items-center justify-center bg-black p-6">
         <div className="relative w-72 md:w-96">
           <div className="absolute -top-3 -left-3 w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
@@ -20,7 +20,7 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* Right Side - Text Content */}
+      {/* Right Side */}
       <div className="md:w-1/2 flex flex-col justify-center px-8 py-12 md:py-0">
         <h2 className="text-yellow-400 text-lg font-medium mb-2">
           HELLO, I'M LESEDI MANOTO
