@@ -29,12 +29,6 @@ const projects = [
     description: "A feature-rich Hangman game following Agile development principles...",
     tech: Hangman,
     github: "https://github.com/notthestarsign/Hangman"
-  },
-  {
-    title: "Project 3: ???",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum, natus repellat esse tenetur voluptate quia minus minima iusto sapiente sed eligendi dolore quidem eos, suscipit numquam deleniti dicta. Magni?",
-    tech: [],
-    github: null
   }
 ];
 
