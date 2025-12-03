@@ -180,7 +180,6 @@ export default function About() {
                       A-reece <br />
                       J Cole <br />
                       Drake <br />
-                      Kendrick Lamar <br />
                     </p>
                   </li>
                   <li>

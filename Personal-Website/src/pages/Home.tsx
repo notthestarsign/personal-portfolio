@@ -28,7 +28,7 @@ const techStack = [
   { name: "Node.js", src: nodejs },
   { name: "SQL", src: sql },
   { name: "Tailwind", src: tailwind },
-  { name: "Git", src: git },
+  { name: "Git", src: git},
 ];
 
 export default function Home() {
@@ -101,7 +101,7 @@ export default function Home() {
           Outside of coding, I enjoy music, writing, and continuously exploring new ways to grow—personally and professionally.
           <a
               href="/about"
-              className="ml-75 mr-75 mt-6 px-9 py-2 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center gap-2 border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+              className="ml-75 mr-75 mt-6 px-9 py-2 rounded-full font-semibold bg-yellow-400 transition flex items-center gap-2 border border-yellow-400 hover:bg-yellow-300 text-black"
             >
               My Story <FaArrowRight />
             </a>

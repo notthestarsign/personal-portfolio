@@ -2,7 +2,7 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import { useEffect, useState } from "react";
 import { Download, FileText, ExternalLink, AlertCircle } from "lucide-react";
-import { FaArrowUp, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Resume() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -27,7 +27,7 @@ export default function Resume() {
         <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-center mb-6">
-              My CV
+              My Resume
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Here you will find everything you need to know about my skills, experience, and education.
@@ -101,7 +101,7 @@ export default function Resume() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href={RESUME_PDF_URL}
-                  download="Lesedi_Manoto_Resume.pdf"
+                  download="CV Lesedi Manoto.pdf"
                   className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg rounded-xl transition-all transform hover:scale-105 shadow-xl hover:shadow-yellow-400/25"
                 >
                   <Download className="w-6 h-6 group-hover:animate-bounce" />
@@ -137,7 +137,7 @@ export default function Resume() {
                       href="/projects"
                       className="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full flex items-center gap-2 hover:bg-yellow-300 transition"
                     >
-                      View Projects <FaArrowRight />
+                      <FaArrowLeft/> View Projects
                     </a>
                   </div>
                 </div>
