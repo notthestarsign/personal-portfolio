@@ -150,7 +150,7 @@ export default function Resume() {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 hover:cursor-pointer"
             >
-              <FaArrowUp/> Back to Top
+              ↑ Back to Top
             </button>
           )}
 
