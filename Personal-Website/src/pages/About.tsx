@@ -21,10 +21,10 @@ export default function About() {
   }, []);
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen">
+    <div className="bg-gray-950 text-white min-h-screen w-full">
           <Navbar />
           {/* Background Section */}
-          <div className="p-10 bg-gradient-to-br from-black to-gray-900 mx-10 mt-10 rounded-xl flex flex-col md:flex-row items-center md:items-start gap-10">
+          <div className="px-5 py-10 sm:px-10 md:px-20 lg:px-32 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 bg-gradient-to-br from-black to-gray-900 rounded-xl shadow-lg mx-4 sm:mx-6 md:mx-10 mt-8 md:mt-12">
             <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={ChildPhoto1}
@@ -54,7 +54,7 @@ export default function About() {
           </div>
     
           {/* Education Section */}
-          <div className="p-10 bg-gradient-to-br from-gray-900 to-black mx-10 mt-10 rounded-xl flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
+          <div className="mx-4 sm:mx-8 lg:mx-10 mt-10 p-6 sm:p-8 lg:p-10 bg-gradient-to-br from-gray-900 to-black rounded-xl flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={ChildPhoto2}
@@ -62,7 +62,7 @@ export default function About() {
                 className="w-[300px] md:w-[400px] h-auto rounded-lg border-4 border-yellow-400 shadow-xl"
               />
             </div>
-            <div className="ml-60 w-full md:w-1/2 flex flex-col justify-center">
+            <div>
               <div className="w-full md:w-1/2 flex flex-col justify-center">
                 <h2 className="text-2xl mb-3 underline underline-offset-4">Education:</h2>
                 <ul className="relative border-l border-yellow-400 ml-4 pl-6 space-y-6">
@@ -150,7 +150,7 @@ export default function About() {
           </div>
 
           {/* Fun Facts Section */}
-          <div className="p-10 bg-gradient-to-br from-gray-900 to-black mx-10 mt-10 rounded-xl flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
+          <div className="mx-4 sm:mx-8 lg:mx-10 mt-10 p-6 sm:p-8 lg:p-10 bg-gradient-to-br from-gray-900 to-black rounded-xl flex flex-col md:flex-row-reverse items-center md:items-start gap-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={personalPhoto2}
@@ -158,7 +158,7 @@ export default function About() {
                 className="w-[300px] md:w-[400px] h-auto rounded-lg border-4 border-yellow-400 shadow-xl"
               />
             </div>
-            <div className="ml-60 w-full md:w-1/2 flex flex-col justify-center">
+            <div>
               <div className="w-full md:w-1/2 flex flex-col justify-center">
                 <h2 className="text-2xl mb-3 underline underline-offset-4">Fun Facts:</h2>
                 <ul className="relative border-l border-yellow-400 ml-4 pl-6 space-y-6">
