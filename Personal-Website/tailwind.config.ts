@@ -1,15 +1,14 @@
-// tailwind.config.ts   ← name it exactly this
 import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./index.html",                    // ← fixed path 
-    "./src/**/*.{js,ts,jsx,tsx}",      // ← fixed path
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  // This line is REQUIRED for Tailwind v4 CSS-first mode
   theme: {
     extend: {},
   },
-  plugins: [],
 };
 
 export default config;
