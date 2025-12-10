@@ -74,12 +74,12 @@ export default function About() {
                   <li>
                     <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
                     <h3 className="text-yellow-400 font-semibold">2021 – Matriculated</h3>
-                    <p className="text-gray-300">Completed Grade 12 and took a gap year to improve results.</p>
+                    <p className="text-gray-300">Completed Grade 12.</p>
                   </li>
                   <li>
                     <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
                     <h3 className="text-yellow-400 font-semibold">2022 – Gap Year</h3>
-                    <p className="text-gray-300">Completed Grade 12 and took a gap year to improve results.</p>
+                    <p className="text-gray-300">I took a gap year to improve my grade 12 results.</p>
                   </li>
                   <li>
                     <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
