@@ -3,6 +3,7 @@ import Footer from "@/components/ui/Footer";
 import { useEffect, useState } from "react";
 import { Download, FileText, ExternalLink, AlertCircle } from "lucide-react";
 import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Resume() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -133,12 +134,12 @@ export default function Resume() {
                     Here’s a glimpseof my favorite projects:
                   </p>
                   <div className="flex justify-center mt-6">
-                    <a
-                      href="/projects"
+                    <Link
+                      to="/projects"
                       className="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full flex items-center gap-2 hover:bg-yellow-300 transition"
                     >
                       <FaArrowLeft/> View Projects
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

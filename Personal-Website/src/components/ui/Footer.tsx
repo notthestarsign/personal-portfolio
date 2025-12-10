@@ -9,7 +9,7 @@ export default function Footer() {
                 <Link to="https://github.com/notthestarsign" target="_blank" rel="noopener noreferrer">
                   <FaGithub />
                 </Link>
-                <Link to="www.linkedin.com/in/lesedimanoto" target="_blank" rel="noopener noreferrer">
+                <Link to="https://linkedin.com/in/lesedimanoto" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin />
                 </Link>
                 <Link to="mailto:lesedielliotmanoto06@gmail.com" target="_blank" rel="noopener noreferrer">
