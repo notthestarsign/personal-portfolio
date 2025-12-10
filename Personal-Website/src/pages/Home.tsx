@@ -15,6 +15,7 @@ import sql from "@/assets/sql.png";
 import tailwind from "@/assets/tailwind.png";
 import git from "@/assets/github.svg";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const techStack = [
   { name: "C++", src: cpp },
@@ -73,18 +74,18 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center justify-center gap-2"
             >
               View Projects <FaArrowRight />
-            </a>
-            <a
-              href="/resume"
+            </Link>
+            <Link
+              to="/resume"
               className="border border-yellow-400 px-6 py-3 rounded-full font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
             >
               View Resume
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -104,12 +105,12 @@ export default function Home() {
 
         {/* Fixed button alignment */}
         <div className="mt-8 flex justify-center">
-          <a
-            href="/about"
+          <Link
+            to="/about"
             className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold bg-yellow-400 text-black hover:bg-yellow-300 transition"
           >
             My Story <FaArrowRight />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -180,12 +181,12 @@ export default function Home() {
               : "Interested in my academic background, skills, and certifications? I have compiled a detailed resume that outlines my journey."}
           </p>
           <div className="mt-8">
-            <a
-              href={section.toLowerCase()}
+            <Link
+              to={section.toLowerCase()}
               className="inline-flex items-center gap-2 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-300 transition"
             >
               View {section} <FaArrowRight />
-            </a>
+            </Link>
           </div>
         </div>
       ))}
