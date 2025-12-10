@@ -6,13 +6,13 @@ export default function Footer() {
     <footer className="mt-20 py-6 text-center border-t border-yellow-400">
       <p className="text-gray-400 mb-4">Let's connect:</p>
               <div className="flex justify-center gap-6 text-yellow-400 text-2xl">
-                <a href="https://github.com/notthestarsign" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/notthestarsign" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <FaGithub />
                 </a>
-                <a href="https://linkedin.com/in/lesedimanoto" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/lesedimanoto" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <FaLinkedin />
                 </a>
-                <a href="mailto:lesedielliotmanoto06@gmail.com" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:lesedielliotmanoto06@gmail.com" aria-label="Email">
                   <FaEnvelope />
                 </a>
               </div>
