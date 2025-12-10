@@ -28,60 +28,60 @@ const techStack = [
   { name: "Node.js", src: nodejs },
   { name: "SQL", src: sql },
   { name: "Tailwind", src: tailwind },
-  { name: "Git", src: git},
+  { name: "Git", src: git },
 ];
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const halfway = window.innerHeight / 2;
-        setShowScrollTop(window.scrollY > halfway);
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const halfway = window.innerHeight / 2;
+      setShowScrollTop(window.scrollY > halfway);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="bg-gray-950 text-white min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
-      <div className="p-10 flex flex-col md:flex-row items-center justify-center gap-12 bg-gradient-to-br from-black to-gray-900 rounded-xl shadow-lg mx-10 mt-10">
+      {/* Hero Section - Fixed for mobile */}
+      <div className="px-5 py-10 sm:px-10 md:px-20 lg:px-32 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 bg-gradient-to-br from-black to-gray-900 rounded-xl shadow-lg mx-4 sm:mx-6 md:mx-10 mt-8 md:mt-12">
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={personalPhoto2}
             alt="Profile"
-            className="w-[280px] h-[400px] md:w-[350px] md:h-[450px] object-cover rounded-full border-4 border-yellow-400 shadow-2xl"
+            className="w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[420px] lg:w-96 lg:h-[500px] object-cover rounded-full border-4 border-yellow-400 shadow-2xl"
           />
         </div>
-        <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-yellow-400">
+
+        <div className="w-full md:w-1/2 text-center md:text-left space-y-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-400 leading-tight">
             Hi, I'm Lesedi Manoto
           </h1>
-          <p className="text-xl text-gray-300 font-medium">
+          <p className="text-lg sm:text-xl text-gray-300 font-medium">
             Final-year Computer Science Student at the University of Pretoria.
           </p>
-          <p className="text-gray-400">
-            Passionate about building innovative software, solving real-world problems, and constantly learning new technologies.<br />
-            <br />
+          <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
+            Passionate about building innovative software, solving real-world problems, and constantly learning new technologies.
+            <br className="hidden sm:block" />
+            <br className="hidden sm:block" />
             Full-stack developer with a focus on software engineering and netcentric development.
-            <br />
-            <br />
           </p>
 
-          <div className="flex justify-center md:justify-start gap-4 mt-4">
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6">
             <a
               href="/projects"
-              className="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center gap-2"
+              className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center justify-center gap-2"
             >
               View Projects <FaArrowRight />
             </a>
             <a
               href="/resume"
-              className="border border-yellow-400 px-5 py-2 rounded-full font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
+              className="border border-yellow-400 px-6 py-3 rounded-full font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
             >
               View Resume
             </a>
@@ -90,85 +90,72 @@ export default function Home() {
       </div>
 
       {/* Quick Summary */}
-      <div className="mt-16 text-center mx-10 p-10 rounded-xl shadow-lg">
-        <h2 className="text-2xl font-semibold underline underline-offset-4 text-yellow-400 mb-4">
+      <div className="mt-12 sm:mt-16 px-5 sm:px-10 md:px-20 lg:px-32 py-10 rounded-xl shadow-lg text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold underline underline-offset-4 text-yellow-400 mb-6">
           A Little About Me
         </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto">
-          I'm a dedicated software enthusiast who went from writing my first <code className="bg-gray-800 p-1 rounded">"Hello World"</code> to building full-stack projects. 
+        <p className="text-gray-300 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+          I'm a dedicated software enthusiast who went from writing my first{" "}
+          <code className="bg-gray-800 px-2 py-1 rounded text-sm">"Hello World"</code> to building full-stack projects. 
           I love tackling challenging problems, learning new concepts, and working on software that can make people's lives easier.
           <br /><br />
           Outside of coding, I enjoy music, writing, and continuously exploring new ways to grow—personally and professionally.
-          <a
-              href="/about"
-              className="ml-75 mr-75 mt-6 px-9 py-2 rounded-full font-semibold bg-yellow-400 transition flex items-center gap-2 border border-yellow-400 hover:bg-yellow-300 text-black"
-            >
-              My Story <FaArrowRight />
-            </a>
         </p>
+
+        {/* Fixed button alignment */}
+        <div className="mt-8 flex justify-center">
+          <a
+            href="/about"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold bg-yellow-400 text-black hover:bg-yellow-300 transition"
+          >
+            My Story <FaArrowRight />
+          </a>
+        </div>
       </div>
 
       {/* Tech Stack */}
-      <div className="bg-gradient-to-br from-black to-gray-900 mx-10 mt-10">
-        <div className="mt-16 text-center">
-          <h2 className="text-2xl font-semibold underline underline-offset-4 text-yellow-400">
-            Technologies I Work With
-          </h2>
+      <div className="bg-gradient-to-br from-black to-gray-900 mx-4 sm:mx-6 md:mx-10 mt-12 sm:mt-16 px-5 py-12 rounded-xl">
+        <h2 className="text-2xl sm:text-3xl font-semibold underline underline-offset-4 text-yellow-400 text-center mb-10">
+          
+          Technologies I Work With
+        </h2>
 
-          <div className="relative w-full overflow-hidden py-10">
-            {/* Fading edge gradients */}
-            <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-gray-950 to-transparent z-10" />
-            <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-gray-950 to-transparent z-10" />
+        {/* Marquee */}
+        <div className="relative w-full overflow-hidden py-8">
+          <div className="absolute left-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-r from-gray-950 to-transparent z-10" />
+          <div className="absolute right-0 top-0 h-full w-16 sm:w-24 bg-gradient-to-l from-gray-950 to-transparent z-10" />
 
-            {/* Scroll container */}
-            <div className="mx-auto w-[90%] max-w-6xl overflow-hidden">
-              <div className="flex w-max animate-scroll gap-6 whitespace-nowrap">
-                {/* duplicate set */}
-                {Array(2)
-                  .fill([
-                    "C++", "Java", "Python", "HTML", "CSS", "JavaScript", "React",
-                    "Angular", "ShadCN/UI", "Node.js", "SQL",
-                  ])
-                  .flat()
-                  .map((tech, idx) => (
-                    <div
-                      key={idx}
-                      className="text-sm md:text-lg px-5 py-2 bg-gray-800 rounded-full text-yellow-400 font-medium shadow-md flex items-center"
-                    >
-                      <span className="mr-1 text-yellow-300"></span> {tech}
-                    </div>
-                  ))}
-              </div>
+          <div className="overflow-hidden">
+            <div className="flex w-max animate-scroll gap-4 sm:gap-6">
+              {Array(2)
+                .fill(null)
+                .map((_, i) => (
+                  <div key={i} className="flex gap-4 sm:gap-6">
+                    {techStack.map((tech, idx) => (
+                      <div
+                        key={idx}
+                        className="px-4 sm:px-5 py-2 bg-gray-800 rounded-full text-yellow-400 font-medium text-sm sm:text-base whitespace-nowrap shadow-md"
+                      >
+                        {tech.name}
+                      </div>
+                    ))}
+                  </div>
+                ))}
             </div>
           </div>
-
-          {/* Animation CSS */}
-          <style>{`
-            @keyframes scroll {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-            .animate-scroll {
-              animation: scroll 20s linear infinite;
-            }
-          `}</style>
         </div>
 
-        {/* Technology Logos Grid */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
+        {/* Grid Logos */}
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 sm:gap-8 mt-12 justify-items-center px-4">
           {techStack.map(({ name, src }, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center text-sm text-gray-300 hover:scale-110 transition-transform duration-300"
+              className="flex flex-col items-center text-xs sm:text-sm text-gray-300 hover:scale-110 transition-transform duration-300"
             >
               <img
                 src={src}
                 alt={name}
-                className="w-12 h-12 md:w-14 md:h-14 object-contain mb-2"
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain mb-2"
               />
               <span>{name}</span>
             </div>
@@ -176,56 +163,55 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Projects Section */}
-      <div className="p-10 items-center justify-center bg-gradient-to-br rounded-xl shadow-lg mt-16 text-center mx-10">
-        <h2 className="text-2xl font-semibold text-yellow-400 mb-4 underline underline-offset-4">
-          Projects
-        </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto">
-          I have worked on various projects that showcase my skills in software development. <br />
-          Here’s a glimpseof my favorite projects:
-        </p>
-        <div className="flex justify-center mt-6">
-          <a
-            href="/projects"
-            className="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full flex items-center gap-2 hover:bg-yellow-300 transition"
-          >
-            View Projects <FaArrowRight />
-          </a>
-        </div>
-      </div>
-
-      {/* Resume Section */}
-      <div className="p-10 items-center justify-center bg-gradient-to-br from-black to-gray-900 rounded-xl shadow-lg mt-16 text-center mx-10">
-        <h2 className="text-2xl font-semibold text-yellow-400 mb-4 underline underline-offset-4">
-          Resume
-        </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto">
-          Interested in my academic background, skills, and certifications? <br />
-          I have compiled a detailed resume that outlines my journey as a computer science student and software developer.
-        </p>
-
-        <div className="flex justify-center mt-6">
-          <a
-            href="/resume"
-            className="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full flex items-center gap-2 hover:bg-yellow-300 transition"
-          >
-            View Resume <FaArrowRight />
-          </a>
-        </div>
-      </div>
-      
-      {showScrollTop && (
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 hover:cursor-pointer"
+      {/* Projects & Resume Sections */}
+      {["Projects", "Resume"].map((section, idx) => (
+        <div
+          key={section}
+          className={`p-8 sm:p-12 md:p-16 mx-4 sm:mx-6 md:mx-10 mt-12 sm:mt-16 rounded-xl shadow-lg text-center bg-gradient-to-br ${
+            idx === 0 ? "from-black to-gray-900" : "from-black to-gray-900"
+          }`}
+        >
+          <h2 className="text-2xl sm:text-3xl font-semibold text-yellow-400 mb-4 underline underline-offset-4">
+            {section}
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto text-base sm:text-lg">
+            {section === "Projects"
+              ? "I have worked on various projects that showcase my skills in software development. Here’s a glimpse of my favorite ones:"
+              : "Interested in my academic background, skills, and certifications? I have compiled a detailed resume that outlines my journey."}
+          </p>
+          <div className="mt-8">
+            <a
+              href={section.toLowerCase()}
+              className="inline-flex items-center gap-2 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-300 transition"
             >
-              ↑ Back to Top
-            </button>
-          )}
+              View {section} <FaArrowRight />
+            </a>
+          </div>
+        </div>
+      ))}
 
-      {/* Footer */}
+      {/* Scroll to Top Button - Better positioning */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black px-5 py-3 rounded-full shadow-2xl hover:bg-yellow-300 transition duration-300 text-lg font-bold"
+        >
+          ↑ Back to Top
+        </button>
+      )}
+
       <Footer />
+      
+      {/* Keep your animation */}
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          animation: scroll 25s linear infinite;
+        }
+      `}</style>
     </div>
   );
 }
