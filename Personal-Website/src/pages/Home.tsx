@@ -182,7 +182,7 @@ export default function Home() {
           </p>
           <div className="mt-8">
             <Link
-              to={section.toLowerCase()}
+              to={`/${section.toLowerCase()}`}
               className="inline-flex items-center gap-2 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-300 transition"
             >
               View {section} <FaArrowRight />
