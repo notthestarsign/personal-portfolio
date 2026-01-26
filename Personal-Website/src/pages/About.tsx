@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function About() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showWhyCSModal, setShowWhyCSModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,18 @@ export default function About() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setShowWhyCSModal(false);
+      }
+    };
+    if (showWhyCSModal) {
+      window.addEventListener("keydown", handleEsc);
+    }
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [showWhyCSModal]);
 
   return (
     <div className="bg-gray-950 text-white min-h-screen w-full">
@@ -123,6 +136,28 @@ export default function About() {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="mx-10 mt-12 text-center">
+        <button
+          onClick={() => setShowWhyCSModal(true)}
+          className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 text-lg hover:cursor-pointer"
+        >
+          <span>Why Computer Science?</span>
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </button>
       </div>
 
       {/* What Drives Me Section */}
@@ -285,6 +320,61 @@ export default function About() {
           <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
         </ul>
       </div>
+
+      {/* === MODAL / POPUP === */}
+      {showWhyCSModal && (
+        <>
+          {/* Backdrop – blurs & dims background */}
+          <div
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 transition-opacity duration-300"
+            onClick={() => setShowWhyCSModal(false)}
+          />
+
+          {/* Modal content */}
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div
+              className="bg-gradient-to-br from-gray-900 to-black border border-yellow-500/40 rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative animate-in fade-in zoom-in-95 duration-300"
+              onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setShowWhyCSModal(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-yellow-400 text-3xl font-bold transition-colors hover:cursor-pointer"
+              >
+                ×
+              </button>
+
+              <div className="p-8 md:p-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-8 text-center">
+                  Why Computer Science?
+                </h2>
+
+                <div className="text-gray-200 leading-relaxed space-y-6 text-base md:text-lg">
+                  <p>
+                    I didn’t grow up coding — I entered university with <strong>zero prior programming experience</strong>.
+                  </p>
+
+                  <p>
+                    During my gap year in 2022, I began noticing how deeply technology influences every part of life: from mobile banking in rural areas, to educational apps, to how people connect and solve problems. That sparked my curiosity — I wanted to understand <strong>HOW</strong> it all worked and whether I could build things that matter.
+                  </p>
+
+                  <p>
+                    I’ve always loved solving puzzles, playing games, thinking logically, and finding better ways to do things. When I finally tried writing my first few lines of code, that same satisfying “aha” moment appeared — but this time, I could create something others could actually use.
+                  </p>
+
+                  <p>
+                    Coming from a small town and a family that valued education above all else, I also saw Computer Science as a realistic path to financial stability, global opportunities, and <strong>most importantly</strong> the chance to solve real problems in South Africa and beyond.
+                  </p>
+
+                  <p className="font-medium text-yellow-300">
+                    I chose BSc Computer Science at the University of Pretoria somewhat open-mindedly… but once I started building actual programs in first year, I fell in love with it. The constant learning, the creativity within structure, and seeing ideas come alive on screen made me realize this isn’t just a degree — it’s what I want to do for the long term.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
 
       {showScrollTop && (
         <button
