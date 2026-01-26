@@ -195,7 +195,7 @@ export default function Home() {
       {showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black px-5 py-3 rounded-full shadow-2xl hover:bg-yellow-300 transition duration-300 text-lg font-bold"
+          className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black px-5 py-3 rounded-full shadow-2xl hover:bg-yellow-300 transition duration-300 text-lg font-bold hover:cursor-pointer"
         >
           ↑ Back to Top
         </button>
