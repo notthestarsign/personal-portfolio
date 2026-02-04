@@ -14,6 +14,9 @@ import aws from "@/assets/aws.png";
 import vercel from "@/assets/vercel.png";
 import tailwind from "@/assets/tailwind.png";
 import shadcn from "@/assets/shadcn.png";
+import php from "@/assets/php.png";
+import phpmyadmin from "@/assets/phpmyadmin.svg";
+import sql from "@/assets/sql.png";
 
 const CalculatorTech = [
   { name: "HTML", src: html },
@@ -58,6 +61,16 @@ const FlashTech = [
 const DocScannerTech = [
   { name: "Python", src: python },
 ];
+
+const ToDoTech = [
+  { name: "HTML", src: html },
+  { name: "JavaScript", src: javascript },
+  { name: "Tailwind", src: tailwind },
+  { name: "PHP", src: php },
+  { name: "phpMyAdmin", src: phpmyadmin },
+  { name: "SQL", src: sql },
+];
+
 
 const finishedProjects = [
   {
@@ -107,7 +120,13 @@ const ongoingProjects = [{
   description: "This document scanner will be built with OpenCV to detect edges, use the edges in the image to find the contour (outline) representing the piece of paper being scanned, and apply a perspective transform to obtain the top-down view of the document.",
   tech: DocScannerTech,
   github: "https://github.com/notthestarsign/Document-Scanner",
-}
+},
+{
+  title: "To-Do - Modern Task Manager",
+  description: "A modern task manager application built with html and Tailwind CSS, featuring php, sql and a clean UI.",
+  tech: ToDoTech,
+  github: "https://github.com/notthestarsign/To-Do",
+},
 ];
 
 export default function Projects() {

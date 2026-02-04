@@ -10,7 +10,7 @@ import css from "@/assets/css.png";
 import javascript from "@/assets/javascript.png";
 import react from "@/assets/react.png";
 import angular from "@/assets/angular.png";
-import nodejs from "@/assets/nodejs.png";
+import php from "@/assets/php.png";
 import sql from "@/assets/sql.png";
 import tailwind from "@/assets/tailwind.png";
 import git from "@/assets/github.svg";
@@ -26,7 +26,7 @@ const techStack = [
   { name: "JavaScript", src: javascript },
   { name: "React", src: react },
   { name: "Angular", src: angular },
-  { name: "Node.js", src: nodejs },
+  { name: "PHP", src: php },
   { name: "SQL", src: sql },
   { name: "Tailwind", src: tailwind },
   { name: "Git", src: git },
