@@ -71,6 +71,13 @@ const ToDoTech = [
   { name: "SQL", src: sql },
 ];
 
+const CodeSentinelTech = [
+  { name: "Python", src: python },
+  { name: "HTML", src: html },
+  { name: "CSS", src: css },
+  { name: "JavaScript", src: javascript },
+];
+
 
 const finishedProjects = [
   {
@@ -80,6 +87,19 @@ const finishedProjects = [
     tech: FutureFeedTech,
     github: "https://github.com/COS301-SE-2025/Future-Feed",
   },
+  {
+    title:"CodeSentinel",
+    description:
+      "An AI-powered code review tool that analyzes GitHub repositories or uploaded codebases and produces professional reports covering bug risks, security vulnerabilities, complexity warnings, and refactoring suggestions.",
+    tech: CodeSentinelTech,
+    github: "https://github.com/notthestarsign/CodeSentinel",
+  },
+  {
+  title: "To-Do - Modern Task Manager",
+  description: "A modern task manager application built with html and Tailwind CSS, featuring php, sql and a clean UI.",
+  tech: ToDoTech,
+  github: "https://github.com/notthestarsign/To-Do",
+},
   {
     title: "Advanced Hangman",
     description:
@@ -121,12 +141,7 @@ const ongoingProjects = [{
   tech: DocScannerTech,
   github: "https://github.com/notthestarsign/Document-Scanner",
 },
-{
-  title: "To-Do - Modern Task Manager",
-  description: "A modern task manager application built with html and Tailwind CSS, featuring php, sql and a clean UI.",
-  tech: ToDoTech,
-  github: "https://github.com/notthestarsign/To-Do",
-},
+
 ];
 
 export default function Projects() {

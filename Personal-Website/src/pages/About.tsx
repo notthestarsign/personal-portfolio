@@ -126,7 +126,7 @@ export default function About() {
               <li>
                 <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
                 <h3 className="text-yellow-400 font-semibold">
-                  2025 – Final Year
+                  2026 – Final Year
                 </h3>
                 <p className="text-gray-300">
                   Completing final year and exploring career opportunities.
