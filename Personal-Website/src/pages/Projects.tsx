@@ -17,6 +17,7 @@ import shadcn from "@/assets/shadcn.png";
 import php from "@/assets/php.png";
 import phpmyadmin from "@/assets/phpmyadmin.svg";
 import sql from "@/assets/sql.png";
+import docker from "@/assets/docker.png";
 
 const CalculatorTech = [
   { name: "HTML", src: html },
@@ -58,9 +59,7 @@ const FlashTech = [
   { name: "shadcn/ui", src: shadcn },
 ];
 
-const DocScannerTech = [
-  { name: "Python", src: python },
-];
+const DocScannerTech = [{ name: "Python", src: python }];
 
 const ToDoTech = [
   { name: "HTML", src: html },
@@ -78,6 +77,17 @@ const CodeSentinelTech = [
   { name: "JavaScript", src: javascript },
 ];
 
+const MyQRTech = [
+  { name: "HTML", src: html },
+  { name: "CSS", src: css },
+  { name: "JavaScript", src: javascript },
+  { name: "Python", src: python },
+];
+
+const LinkForgeTech = [
+  { name: "Java", src: java },
+  { name: "Docker", src: docker},
+];
 
 const finishedProjects = [
   {
@@ -88,18 +98,31 @@ const finishedProjects = [
     github: "https://github.com/COS301-SE-2025/Future-Feed",
   },
   {
-    title:"CodeSentinel",
+    title: "CodeSentinel",
     description:
       "An AI-powered code review tool that analyzes GitHub repositories or uploaded codebases and produces professional reports covering bug risks, security vulnerabilities, complexity warnings, and refactoring suggestions.",
     tech: CodeSentinelTech,
     github: "https://github.com/notthestarsign/CodeSentinel",
   },
   {
-  title: "To-Do - Modern Task Manager",
-  description: "A modern task manager application built with html and Tailwind CSS, featuring php, sql and a clean UI.",
-  tech: ToDoTech,
-  github: "https://github.com/notthestarsign/To-Do",
-},
+    title: "LinkForge",
+    description: "A distributed URL shortener built from scratch",
+    tech: LinkForgeTech,
+    github: "https://github.com/notthestarsign/LinkForge",
+  },
+  {
+    title: "My QR",
+    description: "A modern qr-code scanner and qr-code generator.",
+    tech: MyQRTech,
+    github: "https://github.com/notthestarsign/my-qr",
+  },
+  {
+    title: "To-Do - Modern Task Manager",
+    description:
+      "A modern task manager application built with html and Tailwind CSS, featuring php, sql and a clean UI.",
+    tech: ToDoTech,
+    github: "https://github.com/notthestarsign/To-Do",
+  },
   {
     title: "Advanced Hangman",
     description:
@@ -123,25 +146,28 @@ const finishedProjects = [
   },
 ];
 
-const ongoingProjects = [{
-  title: "Personal Website (This Site)",
-  description: "A personal portfolio website showcasing my projects, skills, and contact information, built with React and Tailwind CSS.",
-  tech: PersonalWebsiteTech,
-  github: "https://github.com/notthestarsign/personal-portfolio",
-},
-{
-  title: "Flash",
-  description: "Flash is an e-commerce platform for small businesses that don't have a platform to advertise and sell their products and services. Flash brings all this and more to your fingertips.",
-  tech: FlashTech,
-  github: "https://github.com/notthestarsign/Flash",
-},
-{
-  title: "Document Scanner",
-  description: "This document scanner will be built with OpenCV to detect edges, use the edges in the image to find the contour (outline) representing the piece of paper being scanned, and apply a perspective transform to obtain the top-down view of the document.",
-  tech: DocScannerTech,
-  github: "https://github.com/notthestarsign/Document-Scanner",
-},
-
+const ongoingProjects = [
+  {
+    title: "Personal Website (This Site)",
+    description:
+      "A personal portfolio website showcasing my projects, skills, and contact information, built with React and Tailwind CSS.",
+    tech: PersonalWebsiteTech,
+    github: "https://github.com/notthestarsign/personal-portfolio",
+  },
+  {
+    title: "Flash",
+    description:
+      "Flash is an e-commerce platform for small businesses that don't have a platform to advertise and sell their products and services. Flash brings all this and more to your fingertips.",
+    tech: FlashTech,
+    github: "https://github.com/notthestarsign/Flash",
+  },
+  {
+    title: "Document Scanner",
+    description:
+      "This document scanner will be built with OpenCV to detect edges, use the edges in the image to find the contour (outline) representing the piece of paper being scanned, and apply a perspective transform to obtain the top-down view of the document.",
+    tech: DocScannerTech,
+    github: "https://github.com/notthestarsign/Document-Scanner",
+  },
 ];
 
 export default function Projects() {
