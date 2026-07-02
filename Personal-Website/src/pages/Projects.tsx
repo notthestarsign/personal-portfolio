@@ -18,6 +18,7 @@ import php from "@/assets/php.png";
 import phpmyadmin from "@/assets/phpmyadmin.svg";
 import sql from "@/assets/sql.png";
 import docker from "@/assets/docker.png";
+import flutter from "@/assets/Flutter.webp";
 
 const CalculatorTech = [
   { name: "HTML", src: html },
@@ -89,6 +90,10 @@ const LinkForgeTech = [
   { name: "Docker", src: docker},
 ];
 
+const KliqTech = [
+  {name: "Flutter", src: flutter}
+]
+
 const finishedProjects = [
   {
     title: "Future Feed (Capstone Project)",
@@ -153,6 +158,12 @@ const ongoingProjects = [
       "A personal portfolio website showcasing my projects, skills, and contact information, built with React and Tailwind CSS.",
     tech: PersonalWebsiteTech,
     github: "https://github.com/notthestarsign/personal-portfolio",
+  },
+  {
+    title: "Kliq",
+    description: "A modern digital identity and smart contact-sharing platform",
+    tech: KliqTech,
+    github: "https://github.com/notthestarsign/Kliq",
   },
   {
     title: "Flash",
