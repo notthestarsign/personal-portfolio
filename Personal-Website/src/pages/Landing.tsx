@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import profileImage from "@/assets/profile.png";
+import profileImage from "@/assets/profile.jpeg";
 import {
   FaArrowRight,
 } from "react-icons/fa";
@@ -26,10 +26,10 @@ export default function Landing() {
           HELLO, I'M LESEDI MANOTO
         </h2>
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-yellow-400 leading-tight">
-          COMPUTER SCIENCE STUDENT
+          COMPUTER SCIENCE GRADUATE
         </h1>
         <p className="text-gray-400 text-base md:text-lg max-w-xl mb-6 leading-relaxed">
-          I'm a Pretoria-based 3rd year BSc Computer Science student with a passion for learning and innovation.
+          I'm a BSc Computer Science graduate from the University of Pretoria, with a passion for learning and innovation.
           I love building software that makes life easier and more meaningful.
         </p>
 

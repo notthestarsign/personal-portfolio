@@ -64,7 +64,7 @@ export default function Home() {
             Hi, I'm Lesedi Manoto
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 font-medium">
-            Final-year Computer Science Student at the University of Pretoria.
+            BSc Computer Science Graduate from the University of Pretoria.
           </p>
           <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
             Passionate about building innovative software, solving real-world problems, and constantly learning new technologies.
@@ -100,7 +100,7 @@ export default function Home() {
           <code className="bg-gray-800 px-2 py-1 rounded text-sm">"Hello World"</code> to building full-stack projects. 
           I love tackling challenging problems, learning new concepts, and working on software that can make people's lives easier.
           <br /><br />
-          Outside of coding, I enjoy music, writing, and continuously exploring new ways to grow—personally and professionally.
+          Outside of coding, I enjoy music, gaming, reading, writing, and continuously exploring new ways to grow, both personally and professionally.
         </p>
 
         {/* Fixed button alignment */}

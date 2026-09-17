@@ -20,7 +20,7 @@ export default function Resume() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const RESUME_PDF_URL = "/CV Lesedi Manoto.pdf";
+  const RESUME_PDF_URL = "/Lesedi_Manoto_CV.pdf";
 
   return (
     <div className="min-h-screen bg-gray-950 text-white flex flex-col">
@@ -30,7 +30,7 @@ export default function Resume() {
           <h1 className="text-4xl font-bold text-center mb-6">My Resume</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Here you will find everything you need to know about my skills,
-            experience, and education.
+            projects, and education.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export default function Resume() {
                 </div>
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold">Resume</h2>
-                  <p className="text-gray-300 mt-1">Updated December 2025</p>
+                  <p className="text-gray-300 mt-1">Updated August 2026</p>
                 </div>
               </div>
               <span className="text-sm text-yellow-400 bg-yellow-400/10 px-4 py-2 rounded-full font-medium">

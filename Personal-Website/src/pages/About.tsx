@@ -2,8 +2,8 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import ChildPhoto1 from "@/assets/Child Photo 1.png";
 import ChildPhoto2 from "@/assets/Child Photo 2.png";
-import personalPhoto from "@/assets/profile.png";
-import personalPhoto2 from "@/assets/Profile2.png";
+import personalPhoto from "@/assets/profile.jpeg";
+import personalPhoto2 from "@/assets/Profile2.jpeg";
 import { useEffect, useState } from "react";
 
 export default function About() {
@@ -126,10 +126,10 @@ export default function About() {
               <li>
                 <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
                 <h3 className="text-yellow-400 font-semibold">
-                  2026 – Final Year
+                  2026 – Graduation
                 </h3>
                 <p className="text-gray-300">
-                  Completing final year and exploring career opportunities.
+                  Completed my BSc Computer Science and currently exploring career opportunities.
                 </p>
                 <span className="absolute -left-2 w-4 h-4 bg-yellow-400 rounded-full"></span>
               </li>

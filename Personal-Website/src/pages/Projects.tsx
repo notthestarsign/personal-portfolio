@@ -90,10 +90,6 @@ const LinkForgeTech = [
   { name: "Docker", src: docker},
 ];
 
-const KliqTech = [
-  {name: "Flutter", src: flutter}
-]
-
 const finishedProjects = [
   {
     title: "Future Feed (Capstone Project)",
@@ -158,19 +154,6 @@ const ongoingProjects = [
       "A personal portfolio website showcasing my projects, skills, and contact information, built with React and Tailwind CSS.",
     tech: PersonalWebsiteTech,
     github: "https://github.com/notthestarsign/personal-portfolio",
-  },
-  {
-    title: "Kliq",
-    description: "A modern digital identity and smart contact-sharing platform",
-    tech: KliqTech,
-    github: "https://github.com/notthestarsign/Kliq",
-  },
-  {
-    title: "Flash",
-    description:
-      "Flash is an e-commerce platform for small businesses that don't have a platform to advertise and sell their products and services. Flash brings all this and more to your fingertips.",
-    tech: FlashTech,
-    github: "https://github.com/notthestarsign/Flash",
   },
   {
     title: "Document Scanner",
