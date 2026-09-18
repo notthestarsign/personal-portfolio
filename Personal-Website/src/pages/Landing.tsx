@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import profileImage from "@/assets/profile.jpeg";
+import profileImage from "@/assets/Profile.jpeg";
 import {
   FaArrowRight,
 } from "react-icons/fa";
