@@ -2,7 +2,7 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import ChildPhoto1 from "@/assets/Child Photo 1.png";
 import ChildPhoto2 from "@/assets/Child Photo 2.png";
-import personalPhoto from "@/assets/profile.jpeg";
+import personalPhoto from "@/assets/Profile.jpeg";
 import personalPhoto2 from "@/assets/Profile2.jpeg";
 import { useEffect, useState } from "react";
 
